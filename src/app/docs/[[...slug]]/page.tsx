@@ -132,8 +132,22 @@ export default async function DocPage(props: DocPageProps) {
             </div>
           </article>
           {!isTocEmpty && (
-            <aside className="fixed bg-secondary-background border-l-4 not-prose border-l-border overflow-hidden top-[70px] xl:flex hidden flex-col justify-between right-0 w-[250px] h-[calc(100svh-70px)] overflow-y-auto">
+            <aside className="fixed bg-secondary-background border-l-4 not-prose border-l-border overflow-hidden top-[70px] xl:flex hidden flex-col right-0 w-[250px] h-[calc(100svh-70px)]">
               <TableOfContents items={tableOfContents} />
+
+              <div className="shrink-0 border-t-4 border-t-border bg-secondary-background px-3 py-3 text-foreground">
+                <p className="font-heading text-base">8bit/cnlibs</p>
+                <p className="mt-2 text-sm font-base">
+                  Check out the 8bit shadcn component library I made
+                </p>
+                <a
+                  href="https://8bit.cnlibs.com/"
+                  target="_blank"
+                  className="mt-4 block w-full rounded-base border-2 border-border bg-black px-3 py-1.5 text-center text-sm font-base text-white transition-opacity hover:opacity-90 dark:bg-white dark:text-black"
+                >
+                  Visit
+                </a>
+              </div>
             </aside>
           )}
         </div>
